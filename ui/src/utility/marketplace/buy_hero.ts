@@ -5,7 +5,7 @@ export const buyHero = (packageId: string, listHeroId: string, priceInSui: strin
   
   // TODO: Convert SUI to MIST (1 SUI = 1,000,000,000 MIST)
     // Hints:
-    const priceInMist = Number(priceInSui) * 1_000_000_0000;
+    const priceInMist = BigInt(priceInSui) * 1_000_000_0000n;
   // TODO: Split coin for exact payment
     // Hints  
     // Use tx.splitCoins(tx.gas, [priceInMist]) to create a payment coin

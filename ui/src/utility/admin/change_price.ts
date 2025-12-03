@@ -5,7 +5,7 @@ export const changePrice = (packageId: string, listHeroId: string, newPriceInSui
   
   // TODO: Convert SUI to MIST (1 SUI = 1,000,000,000 MIST)
     // Hints:
-  const newPriceInMist = Number(newPriceInSui) * 1_000_000_000
+  const newPriceInMist = BigInt(newPriceInSui) * 1_000_000_000n;
   // TODO: Add moveCall to change hero price (Admin only)
   // Function: `${packageId}::marketplace::change_the_price`
   // Arguments: adminCapId (object), listHeroId (object), newPriceInMist (u64)

@@ -8,7 +8,7 @@ export const listHero = (
   const tx = new Transaction();
 
   // TODO: Convert SUI to MIST (1 SUI = 1,000,000,000 MIST)
-  const priceInMist = Number(priceInSui) * 1_000_000_000;
+  const priceInMist = BigInt(priceInSui) * 1_000_000_000n;
 
   // TODO: Add moveCall to list a hero for sale
   // Function: `${packageId}::marketplace::list_hero`
