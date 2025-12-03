@@ -18,7 +18,7 @@ export const listHero = (
   // - Use tx.pure.u64() for the price in MIST
   // - Remember: 1 SUI = 1_000_000_000 MIST
   tx.moveCall({
-      "target" : '${packageId}::hero::list_hero',
+      "target" : `${packageId}::marketplace::list_hero`,
       "arguments" : [
         tx.object(heroId),
         tx.pure.u64(priceInMist)        

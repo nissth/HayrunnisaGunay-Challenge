@@ -19,7 +19,7 @@ export const buyHero = (packageId: string, listHeroId: string, priceInSui: strin
     // Use the paymentCoin from splitCoins for payment
 
     tx.moveCall({
-      "target" : '${packageId}::hero::buy_hero',
+      "target" : `${packageId}::marketplace::buy_hero`,
       "arguments" : [
         tx.object(listHeroId),
         paymentCoin

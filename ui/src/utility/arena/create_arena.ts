@@ -11,7 +11,7 @@ export const createArena = (packageId: string, heroId: string) => {
     // This creates a shared object that others can battle against
 
   tx.moveCall({
-      "target" : '${packageId}::hero::create_hero',
+      "target" : '${packageId}::arena::create_hero',
       "arguments" : [
         tx.object(heroId)      
       ]
